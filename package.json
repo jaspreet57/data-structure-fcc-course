@@ -1,0 +1,44 @@
+{
+  "name": "data-structure-fcc-course",
+  "version": "1.0.0",
+  "description": "Data Structure by FCC",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest --coverage --colors",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaspreet57/data-structure-fcc-course.git"
+  },
+  "keywords": [
+    "data-structure",
+    "fcc",
+    "javascript"
+  ],
+  "author": "Jaspreet Singh <erjaspreet57@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaspreet57/data-structure-fcc-course/issues"
+  },
+  "homepage": "https://github.com/jaspreet57/data-structure-fcc-course#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.10.0",
+    "jest": "^26.0.1",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts?$": "babel-jest"
+    }
+  }
+}
