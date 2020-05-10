@@ -24,6 +24,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'jest'],
   rules: {
     'import/prefer-default-export': ['off'],
+    "max-classes-per-file": ["error", 3],
     'import/extensions': [
       'error',
       'ignorePackages',
