@@ -9,7 +9,7 @@ class ListNode<T> {
   }
 }
 
-class SinglyLinkedList<T> {
+class SinglyLinkedList<T> implements Iterable<T> {
   head: ListNode<T>;
 
   size: number;
@@ -110,6 +110,22 @@ class SinglyLinkedList<T> {
     }
 
     return result;
+  }
+
+  public [Symbol.iterator](): Iterator<T> {
+    let node = this.head;
+
+    return {
+      next: (): IteratorResult<T> => {
+        if (!node) {
+          return ({ value: null, done: true });
+        }
+
+        const nextResult = { value: node.data };
+        node = node.next;
+        return nextResult;
+      },
+    };
   }
 }
 

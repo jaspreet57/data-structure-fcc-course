@@ -112,4 +112,27 @@ describe('class SinglyLinkedList', () => {
       }).toThrow(new Error('List is empty'));
     });
   });
+
+  describe('list with iterable Nature', () => {
+    it('should be iterable - means each element can be accessed using iterator on it', () => {
+      expect.hasAssertions();
+
+      const list = new SinglyLinkedList<string>();
+
+      list.insertAt(0, 'a');
+      list.insertAt(1, 'b');
+      list.insertAt(2, 'c');
+      list.insertAt(3, 'd');
+      list.insertAt(4, 'e');
+
+      const result = [];
+
+      // eslint-disable-next-line no-restricted-syntax
+      for (const ele of list) {
+        result.push(ele);
+      }
+
+      expect(result).toStrictEqual(['a', 'b', 'c', 'd', 'e']);
+    });
+  });
 });
